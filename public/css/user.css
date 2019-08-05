@@ -1,0 +1,43 @@
+button{
+    position:relative;
+    margin-left:28%;
+    /* margin-right:50%;  */
+    margin-top:10px;
+    width:100px;
+    border:2px solid  green ;
+    border-radius:12px;
+}
+button:focus{
+    outline:0px;
+}
+button:hover{
+    background-color:white;
+}
+
+button[id='next'],[id='prev'],[id='save']{
+    margin-left:2%;
+}
+.q_btn{
+    margin-left:2%;
+    border-radius:2px;
+    width:30px;
+}
+input{
+    border:2px solid  green ;
+    border-radius:12px;
+    font-family: 'Ubuntu', sans-serif;
+    padding:3%;
+    box-sizing:border-box;
+}
+input:focus{
+  box-shadow:5px 2px 8px 10px lightblue; 
+  outline:0px;
+}
+#user_info,#info{
+    margin-left:18%;
+}
+#workspace{
+    padding-top:3%;
+    margin-left:3%;
+    display:none;
+}

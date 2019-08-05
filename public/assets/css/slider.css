@@ -1,0 +1,102 @@
+.flat-slider{
+    position: relative;
+    z-index: 10;
+}
+.flat-slider-content{
+    width: 100%;
+    display: flex;
+    padding-top: 30px;
+    overflow: hidden;
+}
+.flat-slider-descriptions{
+    margin-top: -140px;
+    padding-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.flat-slider-descriptions .title{
+    font-size: 28px;
+    padding: 20px;
+    margin-bottom:20px;
+}
+.flat-slider .flat-slider-controls .slider-control{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top:50px;
+    border-radius: 50%;
+    background-color: var(--theme-black);
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+.flat-slider .flat-slider-controls .slider-control.slider-next {
+    right: -10px;
+}
+.flat-slider .flat-slider-controls .slider-control.slider-prev {
+    left: -10px;
+}
+
+
+.item-group{
+    display: flex;
+    height: auto;
+    min-height: 200px;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.item-group .icon{
+    position: relative;
+    top:0;
+    font-size: 16px;
+    transform: translateY(0);
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    background-color: var(--theme-primary);
+    color: #FFFFFF;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 200ms ease-in;
+}
+.item-group.active .icon{
+    top:-20px;
+    height: 120px;
+    width: 120px;
+    font-size: 22px;
+    transition: all 200ms ease-in;
+}
+
+.member-image{
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: red;
+}
+.hod-image{
+    margin: auto;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: red;
+}
+.member-image img, .hod-image img{
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 576px) {
+    .member-image{
+        width: 150px;
+        height: 150px;
+    }
+}
