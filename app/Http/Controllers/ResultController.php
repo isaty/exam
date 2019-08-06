@@ -47,9 +47,13 @@ class ResultController extends Controller
                                     if($correct->isEmpty())
                                         return response()->json(['errors' => ["Answer could not be fetched"] ]);
                                     if ($correct[0]->answer == $response->response)
-                                        $obtain++;
+                                        $obtain=$obtain+4;
+                                        $obtain=$obtain-1;
+                                            
                                 }
                             }
+                            if($obtain<0)
+                            $obtain=0;
                             if ($present->isEmpty()) {
                                 Result::create([
                                     'user_id' => $student->email,

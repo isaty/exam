@@ -8,7 +8,7 @@ function schedule() {
     $(document).ready(function () {
 
         $('form[name="schedule_form"]').on('submit', function () {
-            hour=document.getElementById('hour').value
+            hour=document.getElementById('hour').value;
             minutes=document.getElementById('minutes').value;
             var time_duration = hour*60*60*1000 + minutes*60*1000;
             var schedule = {
