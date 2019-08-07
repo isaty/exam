@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class registration extends Model
 {
     protected $fillable = [
-        'stdno', 'name', 'email', 'phone', 'host', 'gender', 'branch',
+        'stdno', 'name', 'email', 'contactNo', 'hosteller', 'gender', 'branch',
     ];
 
     public static function getStudentData($rollNumber)

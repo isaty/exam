@@ -66,45 +66,48 @@ class RegisterController extends Controller
             'email' => 'required|email|unique:registrations,email',
             'contactNo' => 'required|digits:10',
             'hosteller' => 'required|in:H,D',
+            'gender' => 'required|in:F,M',
             'g-recaptcha-response' => new Captcha(),
         ]);
 
-        $studata = Registration::getStudentData($request->input('rollNumber'));   
+        // $studata = Registration::getStudentData($request->input('rollNumber'));   
        
-        if ($studata->count()) {
-            $registration = new Registration;
-            $registration->name = $request->input('name');
-            $registration->stdno = $request->input('rollNumber');
-            $registration->email = $request->input('email');
-            $registration->contactNo = $request->input('contactNo');
-            $registration->hosteller = $request->input('hosteller');
-            $registration->gender = $studata[0]->gender;
-            $registration->branch = $studata[0]->branch;
+        // if ($studata->count()) {
+            // $registration = new Registration;
+            // $registration->name = $request->input('name');
+            // $registration->stdno = $request->input('rollNumber');
+            // $registration->email = $request->input('email');
+            // $registration->contactNo = $request->input('contactNo');
+            // $registration->hosteller = $request->input('hosteller');
+            // $registration->gender = $studata[0]->gender;
+            // $registration->branch = $studata[0]->branch;
             // Mailer::sendMail($request->input('email'), Mailer::regSuccessMsg($request->input('name'),
             // $request->input('rollNumber')), $mailer);
             // SendSms::SendSMS($request->input('contactNo'),
             //                 SendSms::regSuccessMsg($request->input('name'),
             //                 $request->input('rollNumber')));
 
-            $registration->save();
-            return redirect('/register')->with('message', 'Registraion Success !!!');
-        } else {
-            return redirect('/register')->withErrors(['fail' => 'Invalid DataSet given.']);
-        }
+        //     $registration->save();
+        //     return redirect('/register')->with('message', 'Registraion Success !!!');
+        // } else {
+        //     return redirect('/register')->withErrors(['fail' => 'Invalid DataSet given.']);
+        // }
 
-    // }
-    //     $register= Registration::create([
-    //         'name' => $request->name,
-    //         'email' => $request->email,
-    //         'rollnumber'=>$request->rollNumber,
-    //         'hosteller'=>$request->hosteller,
-    //         'contactNo'=>$request->contactNo
-    //     ]);
-    //     if($register)
-    //     return redirect('/register')->withMessage(['messsage'=>'Registeration successful']);
+    
+        $register= Registration::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'stdno'=>$request->rollNumber,
+            'hosteller'=>$request->hosteller,
+            'contactNo'=>$request->contactNo,
+            'branch'=>'CS',
+            'gender'=>$request->gender
+        ]);
+        if($register)
+        return redirect('/register')->withMessage('message', 'Registraion Success !!!');
 
-    //     return redirect('/register')->with(['errors'=>'Registeration Unsuccessful']);
-    //        }
+        return redirect('/register')->withErrors(['fails'=>'Registeration Unsuccessful']);
+           }
 
 }
-}
+

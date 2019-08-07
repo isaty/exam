@@ -63,7 +63,7 @@
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    Your registration was successful, please check your email for details.
+                    Your registration was successful.
                 </div>
 
                 <!-- Modal footer -->
@@ -104,15 +104,7 @@
 								><i class="fa fa-home fa-2x py-3"></i
 								></a>
 						</div>
-						<div class="col-lg-12">
-							<a
-								href="#instruction"
-								data-toggle="tooltip"
-								data-placement="right"
-								title="Instruction"
-								><i class="fa fa-file-text fa-2x py-3"></i
-								></a>
-						</div>
+						
 						<div class="col-lg-12">
 							<a
 								href="#register"
@@ -138,29 +130,7 @@
 							</h1>
 						</div>
 					</div>
-					<div class="full-screen" id="instruction">
-						<h1 class="text-red pt-5 theme-red">Instruction</h1>
-			    			<div class="scroll-bar">
-
-              <ul>
-                    <li>Students who wish to participate in the workshop, have to register, using the form below.</li>
-                    <li>After regisration, you have to deposit Rs.150/- to complete the registration.</li>
-                    <li>The fee will be deposited in OSS Lab (Project lab) 4th floor - CS-IT block.</li>
-                    <li>Fee can also be deposited at helpdesks ground floor CS-IT block or Back- Block.</li>
-                    <li>Only 60 seats are available, so selection will be first come first serve basis.</li>
-                    <li>If you fail to deposit the fee, your registration will be discarded.</li>
-                    <li>After successful registration, you will be given pre-content.</li>
-                    <li>Participants must go through the pre-content before the workshop.</li>
-                    <li>First session of workshop will be on 9th March 2019 (4PM to 6PM) in Computer Center 1 (CS-IT 3rd Floor).</li>
-                    <li>Second session will be on 10th March (9:30AM to 1:30PM) and (2:30PM to 6:00PM).</li>
-                    <li>Any notification will be provided through registered email and SMS.</li>
-                    <li>Participants may bring their own laptops (Recommended but not necessary).</li>
-                    <li>There will be hacking sessions and quizzes to make workshop interactive.</li>
-                    <li>Post content will also be provided for better understanding and furthur learning.</li>
-                    <li>For any queries, contact Saurabh Srivastava (+91 9454115294) 3rd Year.</li>
-              </ul>
-            </div>
-					</div>
+					
 
           <div class="full-screen mb-4" id="register">
 						<h1 class="text-red pt-5 theme-red">Registration</h1>
@@ -209,6 +179,19 @@
                 @if ($errors->has('hosteller'))
                     <p class="theme-red">* {{ $errors->first('hosteller') }}</p>
                 @endif
+
+                <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" value="F" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">Female</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" value="M" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">Male</label>
+              </div>
+                @if ($errors->has('gender'))
+                    <p class="theme-red">* {{ $errors->first('gender') }}</p>
+                @endif
+
 
 
               <div class="g-recaptcha mt-3" data-sitekey="6LdQILEUAAAAAJ-hTX0A5Jb2pDbx_t3qGkUQwp99" ></div>
