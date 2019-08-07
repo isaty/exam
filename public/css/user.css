@@ -1,7 +1,6 @@
-button{
+/* button{
     position:relative;
     margin-left:28%;
-    /* margin-right:50%;  */
     margin-top:10px;
     width:100px;
     border:2px solid  green ;
@@ -40,4 +39,7 @@ input:focus{
     padding-top:3%;
     margin-left:3%;
     display:none;
+} */
+input[type="radio"]{
+    display:block;
 }

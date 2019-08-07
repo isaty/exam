@@ -217,9 +217,14 @@
                                     <div class="card-body px-lg-5 pt-0">
                                   
                                       <!-- timer                                         -->
-                                      <div id='time_alert'></div>
+                                      <div id='time_alert'>
+                                      <div class="btn btn-success btn-rounded btn-sm" data-text-swap="hour" id="hour" style="font-size:20px;"></div>
+                                      <div class="btn btn-success btn-rounded btn-sm" data-text-swap="minute" id="minute" style="font-size:20px;"></div>
+                                      <div class="btn btn-success btn-rounded btn-sm" data-text-swap="second" id="second" style="font-size:20px;"></div>
+                                      </div>
+
                                     </div>
-                                  
+                      </div>
                                   </div>
           
                 </div>

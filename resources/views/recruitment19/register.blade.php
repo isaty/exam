@@ -211,7 +211,7 @@
                 @endif
 
 
-              <div class="g-recaptcha mt-3" data-sitekey="{{ env('CAPTCHA_SITE_KEY')  }}" ></div>
+              <div class="g-recaptcha mt-3" data-sitekey="6LdQILEUAAAAAJ-hTX0A5Jb2pDbx_t3qGkUQwp99" ></div>
 
               <button type="submit" class="btn btn-primary btn-block my-3 my-reg-btn form-default">Submit</button>
             </form>

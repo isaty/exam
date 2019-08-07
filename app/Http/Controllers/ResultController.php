@@ -48,6 +48,7 @@ class ResultController extends Controller
                                         return response()->json(['errors' => ["Answer could not be fetched"] ]);
                                     if ($correct[0]->answer == $response->response)
                                         $obtain=$obtain+4;
+                                        else
                                         $obtain=$obtain-1;
                                             
                                 }
@@ -60,6 +61,9 @@ class ResultController extends Controller
                                     'exam_id' => $request->Exam,
                                     'result' => $obtain
                                 ]);
+                            }
+                            else {
+                                Result::where('user_id','=', $student->email)->where('exam_id','=',$request->Exam,)->update(['result' => $obtain]);
                             }
                             $obtain = 0;
                         }
