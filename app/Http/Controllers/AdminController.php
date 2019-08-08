@@ -44,15 +44,18 @@ class AdminController extends Controller
         $registration=Registration::all();
         if($registration->isNotEmpty()){
             foreach($registration as $register){
-                $studata = Registration::getStudentData($register->stdno);  
-                if ($studata->isNotEmpty())
-             {
+                $host=$register->hosteller;
+                $password=$host.'@'.$register->stdno;
+                // $password=$host[0]->hosteller.'@'.$register->stdno;
+            //     $studata = Registration::getStudentData($register->stdno);  
+            //     if ($studata->isNotEmpty())
+            //  {
            $user=User::firstOrCreate(['email'=>$register->email],[
                'name'=>$register->name,
                'email'=>$register->email,
-               'password'=>Hash::make($register->stdno),
+               'password'=>Hash::make($password),
                'rollnumber'=>$register->stdno
-           ]);}
+           ]);
 
         }
            return redirect('/admin/home')->with('message', 'Sync Successful');   

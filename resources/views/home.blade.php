@@ -93,23 +93,49 @@
                 <div class="container-fluid">
           <div class="row">
               <div class="col-lg-6 col-sm-6 col-md-6">
-            <h1 class="px-lg-12">Instructions</h1></div>
+            <h1 class="px-lg-12" >Instructions</h1></div>
+            <br>
             <div>&nbsp; </div>
             <div>&nbsp </div>
             
-            <h6>1. Contrary to popular belief, Lorem Ipsum is not simply random text </h6>
-            <h6>1. Contrary to popular belief, Lorem Ipsum is not simply random text </h6>
-            <h6>1. Contrary to popular belief, Lorem Ipsum is not simply random text </h6>
-            <h6>1. Contrary to popular belief, Lorem Ipsum is not simply random text </h6>
-            <h6>1. Contrary to popular belief, Lorem Ipsum is not simply random text </h6>
-            <h6>1. Contrary to popular belief, Lorem Ipsum is not simply random text </h6>
-            <h6>1. Contrary to popular belief, Lorem Ipsum is not simply random text </h6>
-            <h6>1. Contrary to popular belief, Lorem Ipsum is not simply random text </h6>
-            <h6>1. Contrary to popular belief, Lorem Ipsum is not simply random text </h6>
-            <h6>1. Contrary to popular belief, Lorem Ipsum is not simply random text </h6>
-            <h6>1. Contrary to popular belief, Lorem Ipsum is not simply random text </h6>
-            <h6>1. Contrary to popular belief, Lorem Ipsum is not simply random text </h6>
-            <h6>1. Contrary to popular belief, Lorem Ipsum is not simply random text </h6>
+            <h6><b>1.</b>Test duration :60 minutes. You are expected to complete the test within that time. </h6>
+            <br>
+            <h6><b>2.</b> The clock will be set at the server. The countdown timer at the right corner of the screen will display the remaining time
+             available for you to complete the examination. When the timer reaches zero the examination ends by itself. You need to terminate the examination or submit the paper. </h6>
+            <br>
+
+             <h6><b>3.</b> Navigating to a Question: </h6>
+            <h6><li> answer a question, do the following:
+
+Click on the question number in the Question Palette to go to that question directly.</li>
+<br>
+
+<li>Select an answer for a multiple choice type question by clicking on bubble placed before the 4 choices A, B, C, D.</li>
+<br> <li>Use the virtual numeric keypad to enter a number as an answer to a numerical type question.</li>
+<br><li>
+Click on Save and Next to save your answer for the current question and then go to the next question.</li>
+<br>
+Caution: Note that your answer for the current question will not be saved, 
+<br>if you navigate to another question directly by clicking on its question number.
+<br><br>
+</h6>
+<div class="instructions">
+            <h6><b> 4.</b> Question paper conatins:<br></h6><br>
+            </div>
+            <div>
+            <h6> <b>10 HTML+CSS Questions</b>  </h6> <br>
+          
+            <h6><b>10  Aptitude Questions</b> </h6><br>
+            <h6><b>1  Algorithm Question</b></h6>
+            </div>
+            <br>
+            
+          </div>
+
+            <h6><b>5.</b> Marking schemes:</h6>
+            <h6><li>All MCQs Questions carry <b>+4</b> marks for right answer and <b>-1</b> for negative answer.</li></h6>
+            <h6><li>Algorithm question carry <b>10</b> marks and no negative marking for wrong answer.</li></h6>
+            <h6><li>Anybody found guility of cheating will be disqualified.</li></h6>
             
         
               <!-- Form -->
@@ -119,8 +145,8 @@
           </div>
           </div>
           </div>
-    &nbsp
-
+   
+<div>
 <div class="row">
   <div class="col-lg-4">
 
@@ -131,8 +157,10 @@
 
     <!-- Form -->
     <!-- <form class="text-center" style="color: #757575;" > -->
-        <!-- &nbsp -->
+         &nbsp
+         &nbsp
       <!-- Search Exam -->
+
       <div class="md-form">
         <input type="text" id="search" class="form-control" >
         <label for="materialLoginFormPassword">Exam Name</label>
@@ -151,7 +179,7 @@
     <!-- Form -->
 
   </div>
-
+</div>
 </div>
 </div>
 </div>
