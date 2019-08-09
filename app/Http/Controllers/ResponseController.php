@@ -172,4 +172,15 @@ function timeout(Request $request){
 }
 return response()->json(['errors' => ["unsuccessful"]   ]);
 }
+function keep(Request $request){
+  if($request->Exam){
+  $user = auth()->user();
+    $email = $user->email;
+  TimeKeeper::where('user_id','=',$email)->where('exam_id', '=', $request->Exam)->update([
+    'time_left' =>0
+  ]);
+  return response()->json(['success' => ["finished"]   ]);
+}
+return response()->json(['errors' => ["unsuccessful"]   ]);
+}
 }

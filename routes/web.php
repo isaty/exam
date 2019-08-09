@@ -48,6 +48,7 @@ ROUTE::get('/end','AutoController@autoend');
 
 Route::POST('/search','ResponseController@search');
 Route::POST('show','ResponseController@show');
+Route::POST('keep','ResponseController@keep');
 Route::POST('duration','ResponseController@timer');
 Route::POST('save','ResponseController@save');
 Route::POST('check','ResponseController@check');

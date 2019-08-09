@@ -168,11 +168,11 @@
                     <p class="theme-red">* {{ $errors->first('contactNo') }}</p>
                 @endif
                 </div>
-              <div class="form-check form-check-inline">
+              <div class="form-check form-check">
                 <input class="form-check-input" type="radio" name="hosteller" value="H" id="inlineRadio1" value="option1">
                 <label class="form-check-label" for="inlineRadio1">Hosteller</label>
               </div>
-              <div class="form-check form-check-inline">
+              <div class="form-check form-check">
                 <input class="form-check-input" type="radio" name="hosteller" value="D" id="inlineRadio2" value="option2">
                 <label class="form-check-label" for="inlineRadio2">Day Scholar</label>
               </div>
@@ -180,7 +180,7 @@
                     <p class="theme-red">* {{ $errors->first('hosteller') }}</p>
                 @endif
 
-                <div class="form-check form-check-inline">
+                <div class="form-check form-check-inlne">
                 <input class="form-check-input" type="radio" name="gender" value="F" id="inlineRadio1" value="option1">
                 <label class="form-check-label" for="inlineRadio1">Female</label>
               </div>

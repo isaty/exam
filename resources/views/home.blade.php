@@ -15,12 +15,13 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
         crossorigin="anonymous">
-
+       
     <!-- Material Design Bootstrap -->
     <link href="static/css/mdb.min.css" rel="stylesheet">
 </head>
 
 <body>
+
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark success-color">
         <a class="navbar-brand black-text" href="#">Team Open Source</a>
@@ -144,7 +145,7 @@ Caution: Note that your answer for the current question will not be saved,
           
           </div>
           </div>
-          </div>
+          
    
 <div>
 <div class="row">
@@ -183,7 +184,7 @@ Caution: Note that your answer for the current question will not be saved,
 </div>
 </div>
 </div>
-    
+</div>
        <div id="home_page" style="display:none;">
 
 
@@ -246,10 +247,88 @@ Caution: Note that your answer for the current question will not be saved,
                                   
                                       <!-- timer                                         -->
                                       <div id='time_alert'>
-                                      <div class="btn btn-success btn-rounded btn-sm" data-text-swap="hour" id="hour" style="font-size:20px;"></div>
-                                      <div class="btn btn-success btn-rounded btn-sm" data-text-swap="minute" id="minute" style="font-size:20px;"></div>
-                                      <div class="btn btn-success btn-rounded btn-sm" data-text-swap="second" id="second" style="font-size:20px;"></div>
+                                      <div class="btn btn-success btn-rounded btn-sm" data-text-swap="hour" id="hour" style="font-size:15px;"></div>:
+                                      <div class="btn btn-success btn-rounded btn-sm" data-text-swap="minute" id="minute" style="font-size:15px;"></div>:
+                                      <div class="btn btn-success btn-rounded btn-sm" data-text-swap="second" id="second" style="font-size:15px;"></div>
                                       </div>
+
+                                              <!-- <div class="btn btn-danger btn-sm ml-5" ><h5>Algorithm</h5></div> -->
+                                              <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary ml-5" data-toggle="modal" data-target="#basicExampleModal">
+  Algorithm
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Algorithm</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      Ajeet loves research! Now he is looking for subarray of maximal length with non-zero product.
+      <br>
+
+Ajeet has an array A with N elements: A1, A2, ..., AN.<br>
+
+Subarray Aij of array A is elements from index i to index j: Ai, Ai+1, ..., Aj.<br>
+
+Product of subarray Aij is product of all its elements (from ith to jth).<br>
+<br>
+<b>Input</b>
+<br>
+First line contains sinlge integer N denoting the number of elements.<br>
+Second line contains N space-separated integers A1, A2, ..., AN denoting the elements of array.<br>
+<br>
+<b>Output</b><br>
+In a single line print single integer - the maximal length of subarray with non-zero product.<br>
+<br>
+Example<br>
+<b>
+Input:<br>
+6<br>
+1 0 2 3 0 4
+<br>
+Output:<br>
+2
+<br><br>
+Input:<br>
+1<br>
+0
+<br>
+Output:<br>
+0
+<br><br>
+Input:<br>
+3<br>
+1 0 1
+<br>
+Output:<br>
+1</b>
+<br><br>
+Explanation
+For the first sample subarray is: {2, 3}.<br>
+
+For the second sample there are no subbarays with non-zero product.<br>
+
+For the third sample subbarays is {1}, (the first element, or the third one).<br>
+
+
+
+
+      </div>
+      <div class="modal-footer">
+        
+      </div>
+    </div>
+  </div>
+</div>
+                                              <!-- Full Height Modal Right -->
+<!-- Full Height Modal Right -->
 
                                     </div>
                       </div>
@@ -266,6 +345,7 @@ Caution: Note that your answer for the current question will not be saved,
 
       <div>
     <!-- SCRIPTS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script> -->
     <script src='/js/user_inter.js'></script>
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>

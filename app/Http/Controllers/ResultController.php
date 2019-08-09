@@ -37,7 +37,7 @@ class ResultController extends Controller
                     $user = User::all();
                     if ($user->isNotEmpty()) {
                         foreach ($user as $student) {
-                            $present = Result::where('exam_id', '=', $request->Exam)->where('user_id', '=', $student->email)->get();
+                            $present = Result::where('exam_id', '=', $request->Exam)->where('user_id', '=', $student->rollnumber)->get();
                             $feeds = Response::where('exam_id', '=', $request->Exam)->where('user_id', '=', $student->email)->get();
                             if ($feeds->isNotEmpty()) {
                                 foreach ($feeds as $response) {
@@ -57,17 +57,17 @@ class ResultController extends Controller
                             $obtain=0;
                             if ($present->isEmpty()) {
                                 Result::create([
-                                    'user_id' => $student->email,
+                                    'user_id' => $student->rollnumber,
                                     'exam_id' => $request->Exam,
                                     'result' => $obtain
                                 ]);
                             }
                             else {
-                                Result::where('user_id','=', $student->email)->where('exam_id','=',$request->Exam,)->update(['result' => $obtain]);
+                                Result::where('user_id','=', $student->rollnumber)->where('exam_id','=',$request->Exam,)->update(['result' => $obtain]);
                             }
                             $obtain = 0;
                         }
-                        $result = Result::where('exam_id', '=', $request->Exam)->get();
+                        $result = Result::where('exam_id', '=', $request->Exam)->orderBy('result', 'desc')->get();
                         if ($result->isNotEmpty())
                             return $result;
                             return response()->json(['errors' => ["result could not be shown"] ]);
